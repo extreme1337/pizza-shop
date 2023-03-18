@@ -14,7 +14,7 @@ class PizzaController extends Controller
      */
     public function index()
     {
-        $pizzas = Pizza::get();
+        $pizzas = Pizza::paginate(10);
         return view('pizza.index', compact('pizzas'));
     }
 
@@ -23,7 +23,7 @@ class PizzaController extends Controller
      */
     public function create()
     {
-        // return view('pizza.create');
+        return view('pizza.create');
     }
 
     /**
